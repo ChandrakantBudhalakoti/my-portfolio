@@ -72,9 +72,9 @@ export function Contact() {
       id="contact"
       className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32"
     >
-      <div className="card-glow overflow-hidden rounded-3xl p-8 sm:p-12">
-        <div className="grid gap-12 lg:grid-cols-[1fr_1fr]">
-          <div>
+      <div className="card-glow overflow-hidden rounded-3xl p-6 sm:p-10 lg:p-12">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:gap-12">
+          <div className="min-w-0">
             <SectionHeading
               eyebrow="Contact"
               title="Let's build something great"
@@ -85,16 +85,18 @@ export function Contact() {
               <button
                 type="button"
                 onClick={copyEmail}
-                className="group flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 text-left transition-colors hover:border-white/20"
+                className="group flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-4 text-left transition-colors hover:border-white/20 sm:px-5"
               >
-                <span className="flex items-center gap-3">
-                  <Mail className="size-5 text-[var(--color-brand)]" />
-                  <span className="text-sm">{profile.email}</span>
+                <span className="flex min-w-0 items-center gap-3">
+                  <Mail className="size-5 shrink-0 text-[var(--color-brand)]" />
+                  <span className="truncate text-xs sm:text-sm">
+                    {profile.email}
+                  </span>
                 </span>
                 {copied ? (
-                  <Check className="size-4 text-emerald-400" />
+                  <Check className="size-4 shrink-0 text-emerald-400" />
                 ) : (
-                  <Copy className="size-4 text-[var(--color-muted)] transition-colors group-hover:text-white" />
+                  <Copy className="size-4 shrink-0 text-[var(--color-muted)] transition-colors group-hover:text-white" />
                 )}
               </button>
 
@@ -126,7 +128,7 @@ export function Contact() {
             </Reveal>
           </div>
 
-          <Reveal delay={0.15}>
+          <Reveal delay={0.15} className="min-w-0">
             {status === "success" ? (
               <div className="flex h-full min-h-[20rem] flex-col items-center justify-center gap-4 rounded-2xl border border-emerald-400/20 bg-emerald-400/5 p-8 text-center">
                 <span className="grid size-14 place-items-center rounded-full bg-emerald-400/15">
