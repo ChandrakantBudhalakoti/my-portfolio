@@ -52,9 +52,9 @@ export function About() {
                 className="rounded-xl border border-white/10 bg-white/[0.03] p-4"
               >
                 <s.icon className="size-5 text-[var(--color-brand-2)]" />
-                <h3 className="mt-3 font-display text-sm font-semibold">
+                <p className="mt-3 font-display text-sm font-semibold">
                   {s.title}
-                </h3>
+                </p>
                 <p className="mt-1 text-xs leading-relaxed text-[var(--color-muted)]">
                   {s.text}
                 </p>
@@ -79,7 +79,7 @@ export function About() {
                 >
                   <span className="absolute -left-1.5 top-1.5 size-3 rounded-full bg-gradient-to-br from-[var(--color-brand)] to-[var(--color-brand-2)]" />
                   <div className="flex items-baseline justify-between gap-3">
-                    <h4 className="text-sm font-semibold">{e.degree}</h4>
+                    <p className="text-sm font-semibold">{e.degree}</p>
                     <span className="shrink-0 font-mono text-xs text-[var(--color-muted)]">
                       {e.year}
                     </span>

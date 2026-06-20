@@ -1,0 +1,36 @@
+# Chandra Kant Budhalakoti
+
+> Frontend Engineer with 2+ years of experience building scalable, production-grade web applications with React.js, Next.js, Vue.js, Nuxt.js and TypeScript. Based in Haldwani, Uttarakhand, India.
+
+## About
+
+Chandra Kant Budhalakoti is a Frontend Engineer at Trigital Technologies Pvt. Ltd. (Apr 2024 – Present). He specialises in component-driven architecture, reusable design systems, performant rendering (SSR/CSR), REST API integration, and pixel-accurate UI. He has shipped enterprise dashboards, task-management platforms, AI-powered chatbots, and large-scale e-commerce applications.
+
+## Core Skills
+
+- Languages: JavaScript (ES6+), TypeScript, HTML5, CSS3, Node.js
+- Frameworks: React.js, Next.js (App Router), Vue.js, Nuxt.js
+- State: Redux Toolkit, Zustand, Vuex, Context API
+- Styling: Tailwind CSS, SCSS, Material UI, DaisyUI, Figma
+- Backend/APIs: Express.js, REST APIs, Axios, Authentication
+- DevOps: Git, Docker, Vercel, Railway, Netlify
+
+## Selected Projects
+
+- PDF Lab — Open-source full-stack PDF processing platform (Next.js, TypeScript, Express.js, Node.js, Docker).
+- Enterprise Task Tracker — Jira/ClickUp-style project management app (React.js, Next.js, TypeScript, Tailwind CSS).
+- Production E-Commerce Platform — Customer-facing storefront with SSR (Vue.js, Nuxt.js, Vuex).
+- AI Powered Chatbot Platform — Dynamic, multilingual conversational interfaces (Vue.js, REST APIs).
+- Trigital Technologies Website — SEO-optimised company website (Next.js, Tailwind CSS).
+
+## Education
+
+- Master of Computer Applications (MCA), Uttarakhand Technical University, 2024
+- Bachelor of Arts (BA), Kumaon University, 2022
+
+## Contact
+
+- Email: chandrakantbudhalakoti189@gmail.com
+- GitHub: https://github.com/ChandrakantBudhalakoti
+- LinkedIn: https://www.linkedin.com/in/chetanbudhalakoti/
+- Website: https://devchandrakant.vercel.app

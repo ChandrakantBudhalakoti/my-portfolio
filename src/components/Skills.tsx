@@ -55,9 +55,9 @@ export function Skills() {
               key={group.title}
               className="card-glow group rounded-2xl p-6"
             >
-              <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-[var(--color-muted)]">
+              <p className="font-display text-sm font-semibold uppercase tracking-wider text-[var(--color-muted)]">
                 {group.title}
-              </h3>
+              </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {group.skills.map((skill) => (
                   <span
