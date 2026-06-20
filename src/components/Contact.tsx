@@ -34,7 +34,7 @@ export function Contact() {
     if (!WEB3FORMS_KEY) {
       const subject = encodeURIComponent(`Portfolio enquiry from ${form.name}`);
       const body = encodeURIComponent(
-        `${form.message}\n\n— ${form.name}\n${form.email}`
+        `${form.message}\n\n— ${form.name}\n${form.email}`,
       );
       window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
       return;
@@ -68,7 +68,10 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32">
+    <section
+      id="contact"
+      className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32"
+    >
       <div className="card-glow overflow-hidden rounded-3xl p-8 sm:p-12">
         <div className="grid gap-12 lg:grid-cols-[1fr_1fr]">
           <div>
@@ -97,7 +100,11 @@ export function Contact() {
 
               <div className="flex gap-3">
                 {[
-                  { icon: GithubIcon, href: profile.socials.github, label: "GitHub" },
+                  {
+                    icon: GithubIcon,
+                    href: profile.socials.github,
+                    label: "GitHub",
+                  },
                   {
                     icon: LinkedinIcon,
                     href: profile.socials.linkedin,
@@ -125,10 +132,12 @@ export function Contact() {
                 <span className="grid size-14 place-items-center rounded-full bg-emerald-400/15">
                   <Check className="size-7 text-emerald-400" />
                 </span>
-                <h3 className="font-display text-xl font-bold">Message sent!</h3>
+                <h3 className="font-display text-xl font-bold">
+                  Message sent!
+                </h3>
                 <p className="max-w-xs text-sm text-[var(--color-muted)]">
-                  Thanks for reaching out — I&apos;ll get back to you within a day
-                  or two.
+                  Thanks for reaching out — I&apos;ll get back to you within a
+                  day or two.
                 </p>
                 <button
                   type="button"
