@@ -1,5 +1,5 @@
 import { Mail, ArrowUp } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "./ui/BrandIcons";
+import { socialLinks } from "./ui/socials";
 import { profile, navLinks } from "@/lib/data";
 
 export function Footer() {
@@ -32,10 +32,9 @@ export function Footer() {
             ))}
           </nav>
 
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             {[
-              { icon: GithubIcon, href: profile.socials.github, label: "GitHub" },
-              { icon: LinkedinIcon, href: profile.socials.linkedin, label: "LinkedIn" },
+              ...socialLinks,
               { icon: Mail, href: `mailto:${profile.email}`, label: "Email" },
             ].map(({ icon: Icon, href, label }) => (
               <a

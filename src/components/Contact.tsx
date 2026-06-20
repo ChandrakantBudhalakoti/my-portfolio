@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { Mail, Copy, Check, Send, Loader2, AlertCircle } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "./ui/BrandIcons";
+import { socialLinks } from "./ui/socials";
 import { profile } from "@/lib/data";
 import { SectionHeading } from "./ui/SectionHeading";
 import { Reveal } from "./ui/Reveal";
@@ -100,28 +100,17 @@ export function Contact() {
                 )}
               </button>
 
-              <div className="flex gap-3">
-                {[
-                  {
-                    icon: GithubIcon,
-                    href: profile.socials.github,
-                    label: "GitHub",
-                  },
-                  {
-                    icon: LinkedinIcon,
-                    href: profile.socials.linkedin,
-                    label: "LinkedIn",
-                  },
-                ].map(({ icon: Icon, href, label }) => (
+              <div className="flex flex-wrap gap-3">
+                {socialLinks.map(({ icon: Icon, href, label }) => (
                   <a
                     key={label}
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 text-sm transition-colors hover:border-white/20 hover:bg-white/[0.06]"
+                    aria-label={label}
+                    className="grid size-12 flex-1 place-items-center rounded-xl border border-white/10 bg-white/[0.03] text-[var(--color-muted)] transition-colors hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
                   >
                     <Icon className="size-5" />
-                    {label}
                   </a>
                 ))}
               </div>

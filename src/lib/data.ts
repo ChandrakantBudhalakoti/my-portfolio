@@ -10,14 +10,17 @@ export const profile = {
   email: "chandrakantbudhalakoti189@gmail.com",
   phone: "+91-8279633139",
   resumeUrl: "/Chandra_Kant_Budhalakoti_Frontend_Dev.pdf",
-  // Kept under ~160 characters for SEO meta-description limits.
+  // Kept within the 100-130 character SEO sweet spot.
   metaDescription:
-    "Frontend Engineer with 2+ years building scalable React, Next.js & Vue.js apps — enterprise dashboards, e-commerce and chatbots. Fast, accessible web UIs.",
+    "Frontend Engineer building scalable React, Next.js & Vue.js apps — enterprise dashboards, e-commerce and chatbots.",
   summary:
     "Frontend Engineer with 2+ years of professional experience designing and developing scalable, production-grade web applications using React.js, Next.js, Vue.js, Nuxt.js, and TypeScript. I specialise in component-driven architecture, reusable design systems, performant rendering, and pixel-accurate UI — turning complex product requirements into clean, maintainable interfaces.",
   socials: {
     github: "https://github.com/ChandrakantBudhalakoti",
     linkedin: "https://www.linkedin.com/in/chetanbudhalakoti/",
+    x: "https://x.com/CBudhalakoti",
+    instagram: "https://www.instagram.com/chetan_budhalakoti_/",
+    facebook: "https://www.facebook.com/chetan.budhalakoti.189/",
   },
 } as const;
 

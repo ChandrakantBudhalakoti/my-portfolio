@@ -24,7 +24,7 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${profile.name} — ${profile.role}`,
+    default: `${profile.name} — React & Next.js Frontend Engineer`,
     template: `%s — ${profile.name}`,
   },
   description: profile.metaDescription,
@@ -44,6 +44,10 @@ export const metadata: Metadata = {
   publisher: profile.name,
   alternates: {
     canonical: "/",
+    languages: {
+      "en-US": "/",
+      "x-default": "/",
+    },
   },
   robots: {
     index: true,
@@ -93,7 +97,13 @@ const jsonLd = {
     addressRegion: "Uttarakhand",
     addressCountry: "IN",
   },
-  sameAs: [profile.socials.github, profile.socials.linkedin],
+  sameAs: [
+    profile.socials.github,
+    profile.socials.linkedin,
+    profile.socials.x,
+    profile.socials.instagram,
+    profile.socials.facebook,
+  ],
   knowsAbout: [
     "React.js",
     "Next.js",

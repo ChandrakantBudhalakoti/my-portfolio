@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, type Variants } from "motion/react";
 import { Mail, ArrowDown, MapPin } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "./ui/BrandIcons";
+import { socialLinks } from "./ui/socials";
 import { profile, stats } from "@/lib/data";
 
 const roles = ["React.js", "Next.js", "Vue.js", "TypeScript", "Nuxt.js"];
@@ -138,10 +138,9 @@ export function Hero() {
 
             <div className="mx-1 hidden h-8 w-px bg-white/10 sm:block" />
 
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
               {[
-                { icon: GithubIcon, href: profile.socials.github, label: "GitHub" },
-                { icon: LinkedinIcon, href: profile.socials.linkedin, label: "LinkedIn" },
+                ...socialLinks,
                 { icon: Mail, href: `mailto:${profile.email}`, label: "Email" },
               ].map(({ icon: Icon, href, label }) => (
                 <a
