@@ -9,7 +9,7 @@ export const profile = {
   location: "Haldwani, Uttarakhand, India",
   email: "chandrakantbudhalakoti189@gmail.com",
   phone: "+91-8279633139",
-  resumeUrl: "/Chandra_Kant_Budhalakoti_Frontend_Dev.pdf",
+  resumeUrl: "/Chandra_Kant_Budhalakoti.pdf",
   // Kept within the 100-130 character SEO sweet spot.
   metaDescription:
     "Frontend Engineer building scalable React, Next.js & Vue.js apps — enterprise dashboards, e-commerce and chatbots.",
