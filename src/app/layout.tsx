@@ -125,6 +125,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <meta name="google-site-verification" content="yKOHr6XY2H0EL2VwtjjFDZkJFklTn1Ec6zig88enJ1Y" />
+      </head>
       <body
         className={`${inter.variable} ${display.variable} ${mono.variable} antialiased`}
       >
