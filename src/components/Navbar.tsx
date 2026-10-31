@@ -1,15 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { navLinks, profile } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState<string>("#home");
+  const [active, setActive] = useState<string>("/");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -19,14 +21,21 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
+    if (pathname !== "/") {
+      setActive(pathname);
+      return;
+    }
+
     const sections = navLinks
-      .map((l) => document.querySelector(l.href))
+      .filter((l) => l.href !== "/")
+      .map((l) => document.querySelector(`#${l.href.slice(1)}`))
       .filter(Boolean) as Element[];
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) setActive(`#${entry.target.id}`);
+          if (entry.isIntersecting)
+            setActive(entry.target.id === "home" ? "/" : `/${entry.target.id}`);
         });
       },
       { rootMargin: "-45% 0px -50% 0px" }
@@ -34,7 +43,7 @@ export function Navbar() {
 
     sections.forEach((s) => observer.observe(s));
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4">
@@ -50,7 +59,7 @@ export function Navbar() {
         )}
       >
         <a
-          href="#home"
+          href="/"
           className="group flex items-center gap-2.5 font-display text-sm font-bold"
         >
           <span className="grid size-8 place-items-center rounded-lg bg-gradient-to-br from-[var(--color-brand)] to-[var(--color-brand-2)] text-bg shadow-glow">

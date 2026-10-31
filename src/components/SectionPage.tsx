@@ -1,0 +1,15 @@
+import type { ReactNode } from "react";
+import { Background } from "@/components/Background";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+
+export function SectionPage({ children }: { children: ReactNode }) {
+  return (
+    <>
+      <Background />
+      <Navbar />
+      <main className="min-h-screen pt-20">{children}</main>
+      <Footer />
+    </>
+  );
+}

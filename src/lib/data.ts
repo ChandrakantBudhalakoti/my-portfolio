@@ -32,12 +32,12 @@ export const stats = [
 ] as const;
 
 export const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Work", href: "#work" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Skills", href: "/skills" },
+  { label: "Experience", href: "/experience" },
+  { label: "Work", href: "/work" },
+  { label: "Contact", href: "/contact" },
 ] as const;
 
 export type SkillGroup = {
@@ -150,9 +150,26 @@ export type Project = {
   highlights: string[];
   featured?: boolean;
   accent: string;
+  liveUrl?: string;
+  repoUrl?: string;
 };
 
 export const projects: Project[] = [
+  {
+    title: "CodeTakhti",
+    blurb: "Interactive coding and learning platform",
+    description:
+      "A live learning project built to make coding practice approachable through focused, hands-on tools.",
+    stack: ["Next.js", "TypeScript", "Web Development"],
+    highlights: [
+      "Designed and shipped a complete public-facing web experience.",
+      "Built with a responsive interface for learners across devices.",
+    ],
+    featured: true,
+    accent: "from-indigo-500 to-cyan-400",
+    liveUrl: "https://codetakhti.vercel.app/",
+    repoUrl: "https://github.com/ChandrakantBudhalakoti/js-ts-playground",
+  },
   {
     title: "PDF Lab",
     blurb: "Open-source PDF processing platform",
@@ -166,6 +183,8 @@ export const projects: Project[] = [
     ],
     featured: true,
     accent: "from-violet-500 to-fuchsia-500",
+    liveUrl: "https://pdf-lab-alpha.vercel.app/",
+    repoUrl: "https://github.com/ChandrakantBudhalakoti/pdf-lab",
   },
   {
     title: "Enterprise Task Tracker",

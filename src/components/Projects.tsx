@@ -116,6 +116,31 @@ function ProjectCard({ project }: { project: Project }) {
           </span>
         ))}
       </div>
+
+      {(project.liveUrl || project.repoUrl) && (
+        <div className="relative z-10 mt-5 flex flex-wrap gap-3 border-t border-white/10 pt-4">
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-11 items-center gap-1.5 rounded-lg px-2 text-sm font-semibold text-white hover:bg-white/10 hover:text-[var(--color-brand-2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-brand-2)]"
+            >
+              Visit project <ArrowUpRight aria-hidden="true" className="size-4" />
+            </a>
+          )}
+          {project.repoUrl && (
+            <a
+              href={project.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-11 items-center gap-1.5 rounded-lg px-2 text-sm font-semibold text-white hover:bg-white/10 hover:text-[var(--color-brand-2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-brand-2)]"
+            >
+              <GithubIcon className="size-4" /> Source code <ArrowUpRight aria-hidden="true" className="size-4" />
+            </a>
+          )}
+        </div>
+      )}
     </div>
   );
 }

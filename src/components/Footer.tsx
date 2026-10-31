@@ -8,7 +8,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-8">
         <div className="flex flex-col items-start justify-between gap-8 sm:flex-row">
           <div className="max-w-sm">
-            <a href="#home" className="flex items-center gap-2.5 font-display font-bold">
+            <a href="/" className="flex items-center gap-2.5 font-display font-bold">
               <span className="grid size-8 place-items-center rounded-lg bg-gradient-to-br from-[var(--color-brand)] to-[var(--color-brand-2)]">
                 <span className="text-[13px] font-black text-[#06060a]">CK</span>
               </span>
@@ -57,7 +57,7 @@ export function Footer() {
             Next.js + Tailwind CSS.
           </p>
           <a
-            href="#home"
+            href="/"
             className="inline-flex items-center gap-1.5 text-xs text-[var(--color-muted)] transition-colors hover:text-white"
           >
             Back to top
