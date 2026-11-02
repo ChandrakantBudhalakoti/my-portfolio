@@ -1,11 +1,15 @@
 import { cn } from "@/lib/utils";
 import { Reveal } from "./Reveal";
 
+// Sections render an h2 on the home page and an h1 on their standalone routes.
+export type HeadingLevel = "h1" | "h2";
+
 type Props = {
   eyebrow: string;
   title: string;
   description?: string;
   align?: "left" | "center";
+  as?: HeadingLevel;
   className?: string;
 };
 
@@ -14,6 +18,7 @@ export function SectionHeading({
   title,
   description,
   align = "left",
+  as: Heading = "h2",
   className,
 }: Props) {
   return (
@@ -31,9 +36,9 @@ export function SectionHeading({
         </span>
       </Reveal>
       <Reveal delay={0.05}>
-        <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+        <Heading className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
           {title}
-        </h2>
+        </Heading>
       </Reveal>
       {description && (
         <Reveal delay={0.1}>

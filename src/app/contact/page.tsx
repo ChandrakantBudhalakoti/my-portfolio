@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
 import { Contact } from "@/components/Contact";
 import { SectionPage } from "@/components/SectionPage";
-import { profile, siteUrl } from "@/lib/data";
+import { profile } from "@/lib/data";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Contact",
   description: `Contact ${profile.name} about frontend engineering roles, projects, and collaborations.`,
-  alternates: { canonical: `${siteUrl}/contact` },
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
-  return <SectionPage><Contact /></SectionPage>;
+  return <SectionPage><Contact headingAs="h1" /></SectionPage>;
 }

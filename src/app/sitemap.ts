@@ -1,21 +1,14 @@
 import type { MetadataRoute } from "next";
-import { siteUrl } from "@/lib/data";
+import { contentUpdatedAt, navLinks, siteUrl } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+  // A fixed date: a lastmod that changes on every deploy gets ignored by Google.
+  const lastModified = new Date(contentUpdatedAt);
 
-  return [
-    {
-      url: siteUrl,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 1,
-    },
-    ...["about", "skills", "experience", "work", "contact"].map((page) => ({
-      url: `${siteUrl}/${page}`,
-      lastModified,
-      changeFrequency: "monthly" as const,
-      priority: 0.6,
-    })),
-  ];
+  return navLinks.map((link) => ({
+    url: link.href === "/" ? siteUrl : `${siteUrl}${link.href}`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: link.href === "/" ? 1 : 0.8,
+  }));
 }

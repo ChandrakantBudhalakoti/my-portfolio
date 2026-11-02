@@ -2,7 +2,7 @@
 
 import { GraduationCap, Sparkles, Code2, Layers, Rocket } from "lucide-react";
 import { education, profile } from "@/lib/data";
-import { SectionHeading } from "./ui/SectionHeading";
+import { SectionHeading, type HeadingLevel } from "./ui/SectionHeading";
 import { Reveal, RevealGroup, RevealItem } from "./ui/Reveal";
 
 const strengths = [
@@ -23,10 +23,11 @@ const strengths = [
   },
 ];
 
-export function About() {
+export function About({ headingAs }: { headingAs?: HeadingLevel }) {
   return (
     <section id="about" className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32">
       <SectionHeading
+        as={headingAs}
         eyebrow="About"
         title="Engineering interfaces that scale"
         description="A snapshot of who I am, what I value, and where I've trained."
@@ -104,8 +105,8 @@ export function About() {
               <span className="text-brand-gradient">Trigital Technologies</span>
             </p>
             <p className="mt-2 text-sm text-[var(--color-muted)]">
-              Building enterprise dashboards, chatbots and e-commerce platforms
-              with React & Vue.
+              Building the frontend for CiteMentor AI, Trigital&apos;s AI
+              product, with Vue & React.
             </p>
           </Reveal>
         </div>

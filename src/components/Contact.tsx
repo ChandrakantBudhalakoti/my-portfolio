@@ -4,14 +4,14 @@ import { useState, type FormEvent } from "react";
 import { Mail, Copy, Check, Send, Loader2, AlertCircle } from "lucide-react";
 import { socialLinks } from "./ui/socials";
 import { profile } from "@/lib/data";
-import { SectionHeading } from "./ui/SectionHeading";
+import { SectionHeading, type HeadingLevel } from "./ui/SectionHeading";
 import { Reveal } from "./ui/Reveal";
 
 const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
 
 type Status = "idle" | "sending" | "success" | "error";
 
-export function Contact() {
+export function Contact({ headingAs }: { headingAs?: HeadingLevel }) {
   const [copied, setCopied] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState<Status>("idle");
@@ -76,6 +76,7 @@ export function Contact() {
         <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:gap-12">
           <div className="min-w-0">
             <SectionHeading
+              as={headingAs}
               eyebrow="Contact"
               title="Let's build something great"
               description="Have a project, role or idea in mind? My inbox is always open — I'll get back to you within a day or two."

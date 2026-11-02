@@ -1,33 +1,36 @@
 "use client";
 
 import { skillGroups } from "@/lib/data";
-import { SectionHeading } from "./ui/SectionHeading";
+import { SectionHeading, type HeadingLevel } from "./ui/SectionHeading";
 import { RevealGroup, RevealItem } from "./ui/Reveal";
 
 const marquee = [
-  "React.js",
-  "Next.js",
   "Vue.js",
   "Nuxt.js",
+  "React.js",
+  "Next.js",
   "TypeScript",
   "JavaScript",
   "Tailwind CSS",
-  "Redux Toolkit",
   "Zustand",
+  "Vuex",
   "Node.js",
-  "Express.js",
-  "MongoDB",
+  "Express",
+  "Jest",
+  "Vitest",
+  "Vite",
   "Docker",
   "Figma",
   "REST APIs",
   "SCSS",
 ];
 
-export function Skills() {
+export function Skills({ headingAs }: { headingAs?: HeadingLevel }) {
   return (
     <section id="skills" className="py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
+          as={headingAs}
           eyebrow="Skills"
           title="My technical toolbox"
           description="The languages, frameworks and tools I reach for to ship production-grade products."

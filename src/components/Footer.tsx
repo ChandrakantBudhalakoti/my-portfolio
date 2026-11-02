@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Mail, ArrowUp } from "lucide-react";
 import { socialLinks } from "./ui/socials";
 import { profile, navLinks } from "@/lib/data";
@@ -8,12 +9,12 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-8">
         <div className="flex flex-col items-start justify-between gap-8 sm:flex-row">
           <div className="max-w-sm">
-            <a href="/" className="flex items-center gap-2.5 font-display font-bold">
+            <Link href="/" className="flex items-center gap-2.5 font-display font-bold">
               <span className="grid size-8 place-items-center rounded-lg bg-gradient-to-br from-[var(--color-brand)] to-[var(--color-brand-2)]">
                 <span className="text-[13px] font-black text-[#06060a]">CK</span>
               </span>
               {profile.shortName}
-            </a>
+            </Link>
             <p className="mt-4 text-sm leading-relaxed text-[var(--color-muted)]">
               {profile.role} crafting fast, scalable web experiences with React,
               Next.js and Vue.
@@ -22,13 +23,13 @@ export function Footer() {
 
           <nav className="flex flex-wrap gap-x-6 gap-y-2">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="text-sm text-[var(--color-muted)] transition-colors hover:text-white"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -57,7 +58,7 @@ export function Footer() {
             Next.js + Tailwind CSS.
           </p>
           <a
-            href="/"
+            href="#"
             className="inline-flex items-center gap-1.5 text-xs text-[var(--color-muted)] transition-colors hover:text-white"
           >
             Back to top

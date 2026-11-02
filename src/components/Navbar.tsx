@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
@@ -11,7 +12,9 @@ export function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState<string>("/");
+  const [activeSection, setActiveSection] = useState<string>("/");
+  // Standalone pages highlight their own route; the home page uses scroll-spy.
+  const active = pathname === "/" ? activeSection : pathname;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -21,10 +24,7 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
-    if (pathname !== "/") {
-      setActive(pathname);
-      return;
-    }
+    if (pathname !== "/") return;
 
     const sections = navLinks
       .filter((l) => l.href !== "/")
@@ -35,7 +35,7 @@ export function Navbar() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting)
-            setActive(entry.target.id === "home" ? "/" : `/${entry.target.id}`);
+            setActiveSection(entry.target.id === "home" ? "/" : `/${entry.target.id}`);
         });
       },
       { rootMargin: "-45% 0px -50% 0px" }
@@ -58,7 +58,7 @@ export function Navbar() {
             : "border border-transparent"
         )}
       >
-        <a
+        <Link
           href="/"
           className="group flex items-center gap-2.5 font-display text-sm font-bold"
         >
@@ -66,12 +66,12 @@ export function Navbar() {
             <span className="text-bg text-[13px] font-black text-[#06060a]">CK</span>
           </span>
           <span className="hidden sm:inline">{profile.shortName}</span>
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-1 md:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
                 className={cn(
                   "relative rounded-lg px-3 py-2 text-sm transition-colors",
@@ -88,7 +88,7 @@ export function Navbar() {
                   />
                 )}
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -126,7 +126,7 @@ export function Navbar() {
             <ul className="flex flex-col">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     onClick={() => setOpen(false)}
                     className={cn(
@@ -137,7 +137,7 @@ export function Navbar() {
                     )}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li>

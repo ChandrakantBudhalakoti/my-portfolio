@@ -27,9 +27,15 @@ skills, experience, projects and education in one place.
 
 ## 📄 Resume
 
-Drop your résumé PDF into `public/` as
-`Chandra_Kant_Budhalakoti_Frontend_Dev.pdf` so the **Resume** button resolves.
-(The file name is configured via `profile.resumeUrl` in `src/lib/data.ts`.)
+The résumé lives at `public/Chandra_Kant_Budhalakoti.pdf` and is linked from the
+**Resume** button (configured via `profile.resumeUrl` in `src/lib/data.ts`).
+The old `/Chandra_Kant_Budhalakoti_Frontend_Dev.pdf` URL redirects to it.
+
+## 🔎 SEO
+
+Each section also has its own route (`/about`, `/skills`, `/experience`, `/work`,
+`/contact`) so it can be indexed on its own. `src/app/sitemap.ts` builds the sitemap
+from `navLinks`; bump `contentUpdatedAt` in `src/lib/data.ts` when content changes.
 
 ## 🌐 Deploy
 

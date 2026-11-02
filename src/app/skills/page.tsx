@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
 import { Skills } from "@/components/Skills";
 import { SectionPage } from "@/components/SectionPage";
-import { profile, siteUrl } from "@/lib/data";
+import { profile } from "@/lib/data";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Skills",
-  description: `${profile.name}'s frontend engineering skills across React, Next.js, Vue, TypeScript, and web performance.`,
-  alternates: { canonical: `${siteUrl}/skills` },
-};
+  description: `${profile.name}'s skills: Vue 3, Nuxt, React 19, Next.js, TypeScript, Tailwind CSS, Jest and Vitest testing, SSR and web performance.`,
+  path: "/skills",
+});
 
 export default function SkillsPage() {
-  return <SectionPage><Skills /></SectionPage>;
+  return <SectionPage><Skills headingAs="h1" /></SectionPage>;
 }

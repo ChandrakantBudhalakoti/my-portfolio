@@ -58,7 +58,7 @@ export default function OpengraphImage() {
               color: "transparent",
             }}
           >
-            {`${profile.role} · React · Next.js · Vue.js`}
+            {`${profile.role} · ${profile.tagline}`}
           </div>
         </div>
 

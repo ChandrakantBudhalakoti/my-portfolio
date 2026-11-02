@@ -101,8 +101,8 @@ export function Hero() {
             className="mt-6 max-w-xl text-base leading-relaxed text-[var(--color-muted)] sm:text-lg"
           >
             {profile.headline} I turn complex product requirements into clean,
-            accessible, high-performance interfaces — from enterprise dashboards
-            to large-scale e-commerce.
+            accessible, high-performance interfaces — from AI products and
+            enterprise dashboards to large-scale e-commerce.
           </motion.p>
 
           <motion.div

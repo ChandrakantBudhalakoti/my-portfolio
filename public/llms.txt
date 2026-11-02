@@ -1,32 +1,46 @@
 # Chandra Kant Budhalakoti
 
-> Frontend Engineer with 2+ years of experience building scalable, production-grade web applications with React.js, Next.js, Vue.js, Nuxt.js and TypeScript. Based in Haldwani, Uttarakhand, India.
+> Frontend Engineer with 2.5 years of experience building production web applications with Vue.js, Nuxt, React, Next.js and TypeScript. Based in Haldwani, Uttarakhand, India.
 
 ## About
 
-Chandra Kant Budhalakoti is a Frontend Engineer at Trigital Technologies Pvt. Ltd. (Apr 2024 – Present). He specialises in component-driven architecture, reusable design systems, performant rendering (SSR/CSR), REST API integration, and pixel-accurate UI. He has shipped enterprise dashboards, task-management platforms, AI-powered chatbots, and large-scale e-commerce applications.
+Chandra Kant Budhalakoti is a Frontend Engineer at Trigital Technologies Pvt. Ltd. (Hyderabad, remote; Apr 2024 – Present), currently building the frontend for CiteMentor AI, an AI product under Trigital. Previous work there includes a Jira/ClickUp-style task tracker, a tenant management system, Vue/Nuxt e-commerce storefronts, multilingual chatbot systems and the Trigital Technologies marketing site. Strengths: component architecture, state management, REST integration, SSR strategy and web performance.
+
+## Pages
+
+- About: https://devchandrakant.vercel.app/about
+- Skills: https://devchandrakant.vercel.app/skills
+- Experience: https://devchandrakant.vercel.app/experience
+- Work: https://devchandrakant.vercel.app/work
+- Contact: https://devchandrakant.vercel.app/contact
+- Résumé (PDF): https://devchandrakant.vercel.app/Chandra_Kant_Budhalakoti.pdf
 
 ## Core Skills
 
-- Languages: JavaScript (ES6+), TypeScript, HTML5, CSS3, Node.js
-- Frameworks: React.js, Next.js (App Router), Vue.js, Nuxt.js
-- State: Redux Toolkit, Zustand, Vuex, Context API
-- Styling: Tailwind CSS, SCSS, Material UI, DaisyUI, Figma
-- Backend/APIs: Express.js, REST APIs, Axios, Authentication
-- DevOps: Git, Docker, Vercel, Railway, Netlify
+- Languages: TypeScript, JavaScript (ES6+), HTML5, CSS3
+- Frameworks: Vue 3, Nuxt.js, React 19, Next.js (App Router), Node.js, Express
+- State: Vuex, Zustand, Context API
+- Styling: Tailwind CSS, Bootstrap-Vue, DaisyUI, SCSS, CSS Modules, Figma
+- Testing: Jest, Vue Test Utils, Vitest
+- Performance: SSR/CSR strategy, code splitting, lazy loading, caching, Lighthouse, SEO
+- Tooling: Git, Docker, Vite, Vercel, Netlify, Render
 
 ## Selected Projects
 
-- PDF Lab — Open-source full-stack PDF processing platform (Next.js, TypeScript, Express.js, Node.js, Docker).
-- Enterprise Task Tracker — Jira/ClickUp-style project management app (React.js, Next.js, TypeScript, Tailwind CSS).
-- Production E-Commerce Platform — Customer-facing storefront with SSR (Vue.js, Nuxt.js, Vuex).
-- AI Powered Chatbot Platform — Dynamic, multilingual conversational interfaces (Vue.js, REST APIs).
-- Trigital Technologies Website — SEO-optimised company website (Next.js, Tailwind CSS).
+- CodeTakhti — Free, open-source, mobile-first online code editor and compiler for 11 languages, running in the browser on WebAssembly (Next.js, TypeScript, Monaco). Live: https://codetakhti.vercel.app/ · Source: https://github.com/ChandrakantBudhalakoti/js-ts-playground
+- PDF Lab — Open-source PDF processing platform: merge, split, compress, convert, watermark, lock, unlock (Next.js, Express, TypeScript, Docker, qpdf, Ghostscript, ImageMagick). Live: https://pdf-lab-alpha.vercel.app/ · Source: https://github.com/ChandrakantBudhalakoti/pdf-lab
+- CiteMentor AI — Frontend for an AI product at Trigital (Vue.js, React); 20+ reusable components, 35% smaller initial bundle.
+- RAG Pipeline API — PDF question answering with sources using LangChain, PostgreSQL/pgvector and OpenAI or Gemini (Python, FastAPI). Source: https://github.com/ChandrakantBudhalakoti/pdf-rag-api-template
+- Enterprise Task Tracker — Jira/ClickUp-style project management across 6 dashboard views (React.js, Next.js, TypeScript).
+- Production E-Commerce Platform — Vue/Nuxt storefront; SSR lifted Lighthouse performance from 61 to 92.
+- AI Powered Chatbot Platform — Multilingual chatbots across 4 business domains and 3 languages (Vue.js).
+- Trigital Technologies Website — Company site with 95+ Lighthouse SEO and accessibility (Next.js, Tailwind CSS).
+- CodeQuest — Gamified programming lessons with quizzes and puzzles (Next.js, Zustand). Live: https://codequest-ashen.vercel.app/ · Source: https://github.com/ChandrakantBudhalakoti/codequest
 
 ## Education
 
-- Master of Computer Applications (MCA), Uttarakhand Technical University, 2024
-- Bachelor of Arts (BA), Kumaon University, 2022
+- Master of Computer Applications (MCA), Amrapali Group of Institutes, Haldwani (Uttarakhand Technical University), 2024
+- Bachelor of Arts (BA), Kumaun University, Nainital, 2022
 
 ## Contact
 

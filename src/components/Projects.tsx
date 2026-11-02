@@ -5,13 +5,14 @@ import { ArrowUpRight, Star } from "lucide-react";
 import { GithubIcon } from "./ui/BrandIcons";
 import { projects, profile, type Project } from "@/lib/data";
 import { cn } from "@/lib/utils";
-import { SectionHeading } from "./ui/SectionHeading";
+import { SectionHeading, type HeadingLevel } from "./ui/SectionHeading";
 import { RevealGroup, RevealItem } from "./ui/Reveal";
 
-export function Projects() {
+export function Projects({ headingAs }: { headingAs?: HeadingLevel }) {
   return (
     <section id="work" className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32">
       <SectionHeading
+        as={headingAs}
         eyebrow="Selected Work"
         title="Projects I'm proud of"
         description="A selection of products and platforms I've designed and engineered — from open-source tooling to large-scale apps."

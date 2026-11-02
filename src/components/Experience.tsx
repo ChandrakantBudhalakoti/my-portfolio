@@ -2,16 +2,17 @@
 
 import { Briefcase } from "lucide-react";
 import { experiences } from "@/lib/data";
-import { SectionHeading } from "./ui/SectionHeading";
+import { SectionHeading, type HeadingLevel } from "./ui/SectionHeading";
 import { Reveal } from "./ui/Reveal";
 
-export function Experience() {
+export function Experience({ headingAs }: { headingAs?: HeadingLevel }) {
   return (
     <section
       id="experience"
       className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32"
     >
       <SectionHeading
+        as={headingAs}
         eyebrow="Experience"
         title="Where I've made an impact"
         description="Professional roles, responsibilities and the work I've shipped."
@@ -19,7 +20,7 @@ export function Experience() {
 
       <div className="mt-14 space-y-6">
         {experiences.map((exp, i) => (
-          <Reveal key={exp.company} delay={i * 0.1}>
+          <Reveal key={`${exp.company}-${exp.period}`} delay={i * 0.1}>
             <article className="card-glow grid gap-6 rounded-2xl p-7 sm:p-9 lg:grid-cols-[0.8fr_2fr]">
               <div>
                 <span className="grid size-12 place-items-center rounded-xl bg-gradient-to-br from-[var(--color-brand)]/20 to-[var(--color-brand-2)]/20">
@@ -31,7 +32,12 @@ export function Experience() {
                 <p className="mt-1 text-brand-gradient font-semibold">
                   {exp.company}
                 </p>
-                <p className="mt-2 inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-xs text-[var(--color-muted)]">
+                {(exp.team || exp.location) && (
+                  <p className="mt-1 text-sm text-[var(--color-muted)]">
+                    {[exp.team, exp.location].filter(Boolean).join(" · ")}
+                  </p>
+                )}
+                <p className="mt-3 inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-xs text-[var(--color-muted)]">
                   {exp.period}
                 </p>
               </div>
